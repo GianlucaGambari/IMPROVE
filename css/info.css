@@ -1,0 +1,113 @@
+body, html{
+  font-family: "Quicksand", sans-serif;
+  height: 90%;
+}
+
+
+/*css for logo and size logo*/
+
+.logo-container {
+  background-color: #E0E0E0;
+  margin-top: 75px;
+  width: 100%;
+  text-align: center;
+}
+
+.logo-container>img {
+  width: 40%;
+  height: 100%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  margin: auto;
+}
+
+.logo-container>h1 {
+  padding-bottom: 7%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: auto;
+  font-size: 4em;
+}
+
+@media screen and (max-width: 750px) {
+  .logo-container>h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .logo-container>h1 {
+    font-size: 1em;
+  }
+  .logo-container>img {
+    padding-top: 10%;
+  }
+}
+
+
+/*css for central div */
+
+.info {
+  padding: 7% 7%;
+  font-size: 18px;
+  height: 40%;
+  text-align: center;
+}
+
+.one {
+  background-color: #FAFAFA;
+}
+
+
+/*css for footer*/
+
+.info-footer {
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 10%;
+  font-size: 18px;
+}
+
+.color-footer {
+  color: #FFFFFF;
+  background: #616161;
+}
+
+
+/*css team in contact.php*/
+
+.team {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 5%;
+}
+
+
+/*css for reports*/
+
+.padded {
+  height: 111.3%;
+  margin-top: 94px;
+}
+
+.padded-google{
+  height: 90%;
+
+}
+
+.padded-footer{
+  height:25%;
+  background: #616161;
+  text-align: center;
+
+}
+
+.info-footer-reports {
+  padding-top: 1%;
+  font-size: 19px;
+  color: #FFFFFF;
+}

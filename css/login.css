@@ -1,0 +1,60 @@
+body, html {
+  padding-top: 100px;
+  background-color: #e6e6e6;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+}
+.panel-login {
+	border-color: #ccc;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login .panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login .panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 18px;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login .panel-heading a.active-login{
+	color: black;
+	font-size: 24px;
+  font-weight: bolder;
+}
+.panel-login .panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+}
+.btn-submit {
+	outline: none;
+	font-size: 14px;
+	height: auto;
+	padding: 14px 0;
+	text-transform: uppercase;
+  background-color: #222;
+  border-color: #001a00;
+  color:white;
+  font-weight: bold;
+}
+
+.enable{
+}
+.forgot-password {
+	text-decoration: none;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
