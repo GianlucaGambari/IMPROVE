@@ -1,3 +1,7 @@
+<?php
+    include 'database/cookie.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +16,6 @@
 
 <body>
   <?php
-      include 'database/cookie.php';
       include_once('navbar.php');
   ?>
 
@@ -68,7 +71,7 @@
 <div class="color-footer">
   <div class="container">
     <footer class="info-footer info">
-      <p>&copy; IMPROVE YOUR TOWN, &copy; Design by Gianluca Gambari, Matteo Marrè Brunenghi</p>
+      <p>&copy; IMPROVE YOUR TOWN, &copy; Design by Gianluca Gambari</p>
     </footer>
   </div>
 </div>

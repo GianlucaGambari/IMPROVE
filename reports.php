@@ -28,7 +28,7 @@
     <div class="row padded-footer">
       <div class="col col-md-12">
         <footer class="info-footer-reports">
-          <p>&copy; IMPROVE YOUR TOWN, &copy; Design by Gianluca Gambari, Matteo Marrè Brunenghi</p>
+          <p>&copy; IMPROVE YOUR TOWN, &copy; Design by Gianluca Gambari</p>
         </footer>
       </div>
     </div>

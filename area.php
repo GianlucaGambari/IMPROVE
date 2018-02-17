@@ -1,3 +1,7 @@
+<?php
+    include 'database/check_cookie.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -11,9 +15,8 @@
 </head>
 
 <body>
+
   <?php
-      include 'database/check_cookie.php';
-      //include 'database/google-map.php';
       include_once('navbar.php');
   ?>
 

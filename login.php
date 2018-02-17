@@ -1,3 +1,7 @@
+<?php
+    include 'database/login-user.php';
+    include 'database/register-user.php';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,10 +17,9 @@
 <body>
 
   <?php
-      include 'database/login-user.php';
-      include 'database/register-user.php';
-      include_once('navbar.php');
+    include_once('navbar.php');
   ?>
+
 
   <div class="modal fade" id="modal-forgot-pwd" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">

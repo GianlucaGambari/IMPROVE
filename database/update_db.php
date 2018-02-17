@@ -57,8 +57,18 @@ if (isset($_POST['btn-change-user'])) {
         }
 
         if (isset($_COOKIE['userlogin'])){
-          $new_cookie ="cookie_username=".$new_username."&img=".$_SESSION['img']."&cookie_session_id=".session_id();
-          setcookie("userlogin", $new_cookie, time()+3600, "/");
+
+          $img = $_SESSION['img'];
+
+          if ($statement_update_name_img = mysqli_prepare ($connect, "UPDATE cookies SET username=?, img=? WHERE username=?")) {
+            mysqli_stmt_bind_param($statement_update_name_img, "sss", $new_username, $img, $username);
+            mysqli_stmt_execute($statement_update_name_img);
+            mysqli_stmt_close($statement_update_name_img);
+            //mysqli_close($connect);
+
+          }
+          //$new_cookie ="cookie_username=".$new_username."&img=".$_SESSION['img']."&cookie_session_id=".session_id();
+          //setcookie("userlogin", $new_cookie, time()+3600, "/");
         }
         mysqli_close($connect);
         header('Location: area.php');

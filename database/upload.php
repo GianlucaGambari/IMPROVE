@@ -2,6 +2,8 @@
 <?php
 
 session_start();
+require_once ("connect.php");
+$con = db_connection();
 
 $target_dir = "../img/upload/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -39,15 +41,27 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 if ($uploadOk == 1) {
 
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        
+
         rename($target_file, $target_dir.$_SESSION['username_successful'].".".$imageFileType);
         $name = $_SESSION['username_successful'].".".$imageFileType;
+        $username = $_SESSION['username_successful'];
+
         $_SESSION['img'] = $name;
 
-        $new_cookie ="cookie_username=".$_SESSION['username_successful']."&img=".$_SESSION['img']."&cookie_session_id=".session_id();
-        setcookie("userlogin", $new_cookie, time()+3600, "/");
+        if ($statement_update_img = mysqli_prepare ($con, "UPDATE cookies SET img=? WHERE username=?")) {
+          mysqli_stmt_bind_param($statement_update_img, "ss", $name, $username);
+          mysqli_stmt_execute($statement_update_img);
+          mysqli_stmt_close($statement_update_img);
 
+
+        }
+        mysqli_close($con);
         header("Location: ../user_info.php");
+
+        //$new_cookie ="cookie_username=".$_SESSION['username_successful']."&img=".$_SESSION['img'];
+        //setcookie("userlogin", $new_cookie, time()+3600, "/");
+
+
     }
 }
 //}

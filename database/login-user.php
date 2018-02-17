@@ -11,7 +11,7 @@ if (isset($_POST['login-submit'])) {
       $connect = db_connection();
 
       $username = trim($_POST["user"]);
-      $pwd = trim($_POST["password"]);
+      $pwd = $_POST["password"];
 
 
       if ($statement = mysqli_prepare($connect, "SELECT * FROM users WHERE username=?")) {
@@ -34,12 +34,21 @@ if (isset($_POST['login-submit'])) {
             } else {
                $_SESSION['img']="user.png";
             }
-
             if (isset($_POST['remember'])) {
-               $new_cookie ="cookie_username=".$username."&img=".$_SESSION['img']."&cookie_session_id=".session_id();
-               setcookie("userlogin", $new_cookie, time()+3600, "/");
+
+              $new_cookie_db = md5(uniqid($your_user_login, true));
+              $new_cookie = "value=".$new_cookie_db;
+              $con = db_connection();
+              if ($statement_insert_cookies = mysqli_prepare ($con, "INSERT INTO cookies (id, username) VALUES (?,?)")) {
+                mysqli_stmt_bind_param($statement_insert_cookies, "ss", $new_cookie_db, $username);
+                mysqli_stmt_execute($statement_insert_cookies);
+                mysqli_stmt_close($statement_insert_cookies);
+                mysqli_close($con);
+
+              }
+              setcookie("userlogin", $new_cookie, time()+3600, "/");
             }
-            header('Location: area.php');
+            header('Location:area.php');
          }
          else {
            $errLogin = "Username or Password incorrect !!";

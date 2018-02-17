@@ -17,13 +17,13 @@
     include_once('navbar.php');
   ?>
 
-  <div class ="chat-title">
+  <!--<div class ="chat-title">
      <div class="container-fluid" >
        <h1> Chat </h1>
      </div>
-   </div>
+   </div>-->
 
-   <div class="container all-info">
+   <div class="container all-info" style="margin-top:120px">
 
      <div style="height:100%; margin:0;">
        <!-- markers -->

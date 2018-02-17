@@ -9,13 +9,14 @@
         $img = $_SESSION['img'];
     }
     else {
+        $connect = db_connection();
+
         parse_str($_COOKIE['userlogin'], $array);
 
         $username=$array['cookie_username'];
         $_SESSION['img'] = $array['img'];
 
         require_once ("connect.php");
-        $connect = db_connection();
 
         $sql = "SELECT email FROM users where username='".$username."'";
         $result = mysqli_query($connect, $sql);
@@ -26,8 +27,4 @@
         }
         mysqli_close($connect);
     }
-
-
-
-
 ?>

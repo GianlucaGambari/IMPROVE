@@ -20,7 +20,13 @@ if(isset($_SESSION['username_successful']) ) {
 }
 else {
     parse_str($_COOKIE['userlogin'], $array);
-    $username=$array['cookie_username'];
+    $cookie=$array['value'];
+
+    $sql_cookie= "SELECT username FROM cookies where id='".$cookie."'";
+    $result_cookie =  mysqli_query($connect,$sql_cookie);
+    $row_cookie = mysqli_fetch_array($result_cookie);
+
+    $username = $row_cookie['username'];
 }
 
 ?>

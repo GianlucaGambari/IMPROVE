@@ -25,18 +25,11 @@
       <div class="container team">
         <div class="row">
             <h1>IMPROVE'S TEAM</h1>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <img class="img-circle" src="img/gian.png" alt="Generic placeholder image" width="200" height="200">
                 <h2>Gianluca Gambari</h2>
                 <p>is the CO-CEO and CO-Founder of Improve, a student of computer science at University of Genua.</p>
                 <p><a class="btn btn-default btn-lg" href="https://www.facebook.com/gianluca.gambari?fref=ts" role="button">View details &raquo;</a></p>
-            </div>
-
-            <div class="col-lg-6">
-                <img class="img-circle" src="img/matte.png" alt="Generic placeholder image" width="200" height="200">
-                <h2>Matteo Marrè Brunenghi</h2>
-                <p>is the CO-CEO and CO-Founder of Improve, a student of computer science at University of Genua.</p>
-                <p><a class="btn btn-default btn-lg" href="https://www.facebook.com/matteo.marrebrunenghi?fref=ts" role="button">View details &raquo;</a></p>
             </div>
         </div>
     </div>
@@ -45,7 +38,7 @@
   <div class="color-footer">
     <div class="container">
       <footer class="info-footer">
-        <p>&copy; IMPROVE YOUR TOWN, &copy; Design by Gianluca Gambari, Matteo Marrè Brunenghi</p>
+        <p>&copy; IMPROVE YOUR TOWN, &copy; Design by Gianluca Gambari</p>
       </footer>
     </div>
   </div>
