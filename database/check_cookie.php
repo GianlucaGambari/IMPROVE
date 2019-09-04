@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['username_successful']) && !isset($_COOKIE['userlogin'])) {
+    /*if(!isset($_SESSION['username_successful']) && !isset($_COOKIE['userlogin'])) {
         header("location: index.php");
     }
     if(isset($_SESSION['username_successful']) ) {
@@ -26,5 +26,5 @@
             $email=$row["email"];
         }
         mysqli_close($connect);
-    }
+    }*/
 ?>
